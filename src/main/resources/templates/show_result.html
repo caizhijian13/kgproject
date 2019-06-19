@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="page-head-link">
+    <title>纺织服装知识图谱</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <!-- Bootstrap Core CSS -->
+    <link th:href="@{/css/bootstrap.css}" rel='stylesheet' type='text/css' />
+
+    <!-- Custom CSS -->
+    <link th:href="@{/css/style.css}" rel='stylesheet' type='text/css' />
+    <!-- font-awesome icons CSS -->
+    <link th:href="@{/css/font-awesome.css}" rel="stylesheet">
+    <!-- //font-awesome icons CSS -->
+
+    <!-- side nav css file -->
+    <link th:href="@{/css/SidebarNav.min.css}"  media='all' rel='stylesheet' type='text/css'/>
+    <!-- side nav css file -->
+
+    <!-- js-->
+    <script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+    <script th:src="@{/js/modernizr.custom.js}"></script>
+
+    <!--webfonts-->
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <!--//webfonts-->
+
+    <!-- Metis Menu -->
+    <script th:src="@{/js/metisMenu.min.js}"></script>
+    <script th:src="@{/js/custom.js}"></script>
+    <link href="/css/custom.css" rel="stylesheet">
+    <!--//Metis Menu -->
+
+</head>
+<style>
+    .text { font-size: 10px; pointer-events: none; }
+    .node { fill:#bee0fc; stroke: #bee0fc; stroke-width: 1px; }
+    .node.no1{fill:#483d8b;}
+    .node.no2{fill:#4169e1;}
+    .node.no3{fill:#1e90ff;}
+    .node.no4{fill:#20b2aa;}
+    .node.no5{fill:#8fbc8f;}
+    .node.no6{fill:#7fffd4;}
+    .node.design{fill:#008800;}
+    .node.lfabric{fill:#ff0000;}
+    .link { stroke: #999; stroke-opacity: .6; stroke-width: 3px; }
+    a{text-decoration:none;}
+    a:hover{text-decoration:none; color:"black";}
+    .img-responsive { display: block; height: auto; max-width: 90%; }
+</style>
+<body class="cbp-spmenu-push">
+<!--left-fixed -navigation-->
+<!-- header-starts -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">纺织服装知识图谱</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <div class="profile_details_left"><!--notifications of menu start -->
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <!--<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+                        <a href="http://10.199.157.176:8081">首页</a>
+                        <!--</button>-->
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相关知识导航 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://10.199.157.176:8000">服装设计知识</a> </li>
+                            <li><a href="http://10.199.157.176:5000">面辅料信息检索</a> </li>
+                            <li><a href="http://10.199.157.176:8080">流行趋势速知</a> </li>
+                            <li><a href="/standards">工业4.0相关标准</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--<div class="clearfix"> </div>-->
+                <!--&lt;!&ndash;notification menu end &ndash;&gt;-->
+                <!--<div class="clearfix"> </div>-->
+            </div>
+            <div class="header-left">
+
+                <!--search-box-->
+                <div class="row">
+                    <form class="input" id="search_head" action="/search" method="post">
+                        <div class="col-md-8">
+                            <input class="sb-search-input input__field--madoka" name="search_name" placeholder="Search..." type="search" id="search" />
+                            <label class="input__label" for="search">
+                                <svg class="graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                                    <path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                            <!--<span class="input-group-btn" >-->
+                            <button class="btn btn-default" type="submit" id = "bn1">搜索</button>
+                            <!--</span>-->
+                        </div>
+                    </form>
+                </div><!--//end-search-box-->
+
+
+                <!--<div class="clearfix"> </div>-->
+                <!--</div>-->
+                <!--<div class="clearfix"> </div>-->
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- //header-ends -->
+<!-- //header-ends -->
+<!-- main content start-->
+<div class="row">
+    <style type="text/css">
+        body{font-size:14px;font-family:arial,verdana,sans-serif;line-height:1.666;padding:0;margin:0;overflow:auto;white-space:normal;word-wrap:break-word;min-height:100px}
+        td, input, button, select, body{font-family:Helvetica, 'Microsoft Yahei', verdana}
+        pre {white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;width:95%}
+        th,td{font-family:arial,verdana,sans-serif;line-height:1.666}
+        img{ border:0}
+        header,footer,section,aside,article,nav,hgroup,figure,figcaption{display:block}
+    </style>
+
+</div>
+
+<div class="row">
+    <!--左侧搜索结果表格-->
+    <div class="col-md-2">
+        已经为您搜索  <span th:text="${name}" style="color: #ac2925">未知</span>  相关字段
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <label>搜索结果</label> <span class="pull-right"><i class="fa fa-angel-down"></i> </span>
+            </div>
+            <ul class="nav nav-pills nav-stacked list-group" th:each="a : ${infolist}">
+                <li class="list-group-item" th:text="${a.getName()}" id="click_li"></li>
+            </ul>
+        </div>
+        <!--<table class="table"style="width: 200px; padding-left: 300px">-->
+            <!--<tr th:each="a : ${infolist}">-->
+                <!--<td style="height: 20px; " >-->
+                    <!--<button th:text="${a.getName()}" id="td_bn"></button>-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    </div>
+    <div class="col-md-7">
+        <div id="graph"></div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-info pull-right">
+            <div class="panel-heading" id="title" th:text="${name}"></div>
+            <div id="panel-body" class="panel-body">
+                <p id="p_describe" th:text="${node.getDescription()}"></p>
+                <form id="search1" method="post">
+                    <input id="panel-input" name="id" type="text" class="hidden" value="1702">
+                    <button id="detail-button" type="submit" class="btn btn-info center-block"><a th:href="@{'http://baike.baidu.com/item/'+${name}}">百科详情</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+<script>
+    // $("#search1").submit(detail);
+    // function detail() {
+    //     // var name = [[${name}]];
+    //     alert("[[${name}]]");
+    //     var url = "http://www.baidu.com";
+    //     location.href(url);
+    // }
+    function checkForm() {
+        var search_name = $("input[name='search_name']").val();
+        if(search_name=="" || search_name==null || search_name == undefined){
+            alert("搜索框不能为空");
+            return false;
+        }
+        else
+            return true;
+
+    }
+
+    var nowname = "";
+    // $("#click_li").onclick(function (d) {
+    //     alert("    ");
+    //     var d_name = d.target.textContent;
+    //     alert(d_name);
+    //     draw(d_name);
+    // })
+
+        function draw(name) {
+            $("#graph").empty();
+            var mark = name;
+            var width = 1200;
+            var height = 500;
+
+            var force = d3.layout.force()
+                .size([width,height])    //指定范围
+                .linkDistance(100)       //指定连线长度
+                .charge(-400);           //相互之间的作用力
+
+            var svg = d3.select("#graph").append("svg")
+                .attr("width",width).attr("height",height)
+                .attr("pointer-events","all");
+
+            d3.json("/selectgraph?name="+mark,function (error,graph) {
+                if(error) return;
+
+                force.nodes(graph.nodes).links(graph.links).start();
+
+                //箭头
+                var marker = svg.append("marker")
+                    .attr("id","resolved")
+                    .attr("markerUnits","userSpaceOnUse")
+                    .attr("viewBox","0 -5 10 10")   //坐标系的区域
+                    .attr("refX",32)
+                    .attr("refY",-1)
+                    .attr("markerWidth",10)//标识的大小
+                    .attr("markerHeight",10)
+                    .attr("orient","auto")//绘制方向，可设定为：auto（自动确认方向）和角度值
+                    .attr("stroke-width",2)//箭头宽度
+                    .append("path")
+                    .attr("d","M0,-5L10,0L0,5")//箭头的路径
+                    .attr('fill','#000000');//箭头颜色
+
+                //设置连接线
+                var svg_edges = svg.selectAll(".link")
+                    .data(graph.links)
+                    .enter()
+                    .append("line")
+                    .attr({
+                        'd': function (d) { return 'M '+d.source.x+' '+d.source.y+' L '+d.target.x+' '+d.target.y},
+                        'class': 'link',
+                        'id':function (d,i) {return 'link'+i;}
+                    })
+                    .attr("marker-end","url(#resolved)"); //根据箭头标记的id号标记箭头
+
+                //添加节点
+                var svg_nodes = svg.selectAll(".node")
+                    .data(graph.nodes)
+                    .enter()
+                    .append("circle")
+                    .attr('r',function (d) {
+                        if(d.label=="node")
+                            return 30-2*d.label;
+                        else
+                            return 20;
+                    })
+                    .attr("class",function (d) {
+                        if(d.label=="node")
+                            return "node "+"no"+d.level;
+                        else
+                            return "node "+d.label;
+                    })
+                    // .on("click",function (d) {
+                    //     nowname = d.name;
+                    //     showDetail(d.id);
+                    // })
+                    .call(force.drag)
+                    .on("dblclick",function (d) {
+                        var url = "/search?search_name="+d.name;
+                        if (d.name == "相关标准") {
+                                    // var url = encodeURI("standards.html");
+                                    location.href = "/standards";
+                                }
+                        else
+                        // location.href = url;
+                            draw(d.name);
+                    })
+                ;
+                svg_nodes.append("title")
+                    .text(function (d) {
+                        return d.description;
+                    })
+                //添加描述节点的文字
+                var svg_texts = svg.selectAll(".text")
+                    .data(graph.nodes)
+                    .enter()
+                    .append("text")
+                    .style("fill","black")
+                    .attr("class","text")
+                    .attr("text-anchor","middle")
+                    .text(function (d) {
+                        return d.name;
+                    })
+
+                force.on("tick",function () {  //对于每一个时间间隔
+
+                    //更新连线坐标
+                    svg_edges.attr("x1",function (d) {return d.source.x; })
+                        .attr("y1",function (d) {return d.source.y; })
+                        .attr("x2",function (d) {return d.target.x; })
+                        .attr("y2",function (d) {return d.target.y; })
+
+                    //更新节点坐标
+                    svg_nodes.attr("cx",function (d) {return d.x=Math.max(20,Math.min(width-20,d.x)); })
+                        .attr("cy",function (d) {return d.y=Math.max(20,Math.min(width-20,d.y)); })
+
+                    //更新文字坐标
+                    svg_texts.attr("x",function (d) {return d.x; })
+                        .attr("y",function (d) {return d.y; })
+
+                });
+            });
+
+        }
+        function search() {
+            var query = $("#search").find("input[name=search]").val();
+            draw(query);
+            // $.get("/show_result?search_name=*"+encodeURIComponent(query)+"*",
+            //         function (data) {
+            //             var t = $("table#results tbody").empty();
+            //             if(!data) return;
+            //             data.forEach(function (node) {
+            //                 $("<tr><td class='node'>" + node.name + "</td></tr>").append(t)
+            //                     .click(function () {draw(($this).find("td.node").text());})
+            //             });
+            //         },"json");
+            return false;
+        }
+        draw("[[${name}]]");
+        $("#search").submit(search);
+        // $("").click(function () {
+        //     if(nowname !=""){
+        //         var searchUrl = encodeURI("");
+        //         location.href = searchUrl;
+        //     }
+        // })
+
+    // })
+</script>
+<!--&lt;!&ndash; side nav js &ndash;&gt;-->
+<!--<script th:src="@{/js/SidebarNav.min.js}" type='text/javascript'></script>-->
+<!--<script>-->
+    <!--$('.sidebar-menu').SidebarNav()-->
+<!--</script>-->
+<!--&lt;!&ndash; //side nav js &ndash;&gt;-->
+
+<!--&lt;!&ndash; Classie &ndash;&gt;&lt;!&ndash; for toggle left push menu script &ndash;&gt;-->
+<!--<script th:src="@{/js/classie.js}"></script>-->
+<!--<script>-->
+    <!--var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),-->
+        <!--showLeftPush = document.getElementById( 'showLeftPush' ),-->
+        <!--body = document.body;-->
+
+    <!--showLeftPush.onclick = function() {-->
+        <!--classie.toggle( this, 'active' );-->
+        <!--classie.toggle( body, 'cbp-spmenu-push-toright' );-->
+        <!--classie.toggle( menuLeft, 'cbp-spmenu-open' );-->
+        <!--disableOther( 'showLeftPush' );-->
+    <!--};-->
+
+    <!--function disableOther( button ) {-->
+        <!--if( button !== 'showLeftPush' ) {-->
+            <!--classie.toggle( showLeftPush, 'disabled' );-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
+<!-- //Classie --><!-- //for toggle left push menu script -->
+
+<!--scrolling js-->
+<script th:src="@{/js/jquery.nicescroll.js}"></script>
+<script th:src="@{/js/scripts.js}"></script>
+<!--//scrolling js-->
+
+<!-- Bootstrap Core JavaScript -->
+<script th:src="@{/js/bootstrap.js}"> </script>
+
+</body>
+</html>

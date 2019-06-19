@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head th:replace="back_common::back-common-headlink"></head>
+
+<body>
+<!--头部-->
+<div th:replace="back_common::back-common-head"></div>
+
+<!--下部整体-->
+<div class="container-fluid" style="margin-top: 31px; height: 600px; border: 1px solid pink" th:fragment="back-common-underpart">
+    <div class="row">
+        <!--左侧固定式导航栏-->
+        <div th:replace="back_common::back-common-underpart-left"></div>
+
+        <div class="col-md-10" style="border: 0px solid black; width: 1120px; margin-top: 15px ;">
+            <!--表单提交-->
+            <div class="col-md-7" style=" padding: 25px 100px 0px 0px">
+                <div>
+                <form class="form-horizontal" action="/back_addnode_book" method="post"><!--th:action="@{/subfirst}" th:object="${nodeinfo}"-->
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">术语中文</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="" placeholder="必填" name="cname" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">Y</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="" name="y">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">D</label>
+                        <div class="col-sm-9">
+
+                            <input type="text" class="form-control" id="" name="d">
+                            <div style="padding-top: 10px; margin-bottom: 0px">多项格式：xxx，xxx，xxx （使用逗号分隔）</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">S</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="" name="s">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">F</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="" name="f">
+                            <div style="padding-top: 10px; margin-bottom: 0px">多项格式：xxx，xxx，xxx</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">Z</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="" name="z">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-3 control-label">C</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="" name="c">
+                        </div>
+                    </div>
+                    <div class="form-group" style="float: right; ">
+                        <button type="submit" class="btn btn-default" style="margin-right: 15px; width: 100px;">提交</button>
+                    </div>
+                </form>
+                </div>
+                <div style="margin-top: 58px; padding-left: 58px">
+                    <form class="form-horizontal"  method="POST" enctype="multipart/form-data" action="/file">
+                        <div class="form-group">
+                            <label  class="col-sm-3 control-label">上传文件:</label>
+                            <div class="col-sm-9">
+                                <input type="file"  id="" name="file" >
+                                <input type="submit" class="form-control" id=""  value="上传" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <!-- 指引符说明--><!--YDSFZC-->
+            <div class="col-md-5" style=" padding: 0px 0px 0px 0px">
+                <span><h2>引导符说明：</h2></span> <br>
+                <ul class="list-group">
+                    <li class="list-group-item">Y <p style="text-indent:2em;">
+                        优选词指引符。只在非优选词下使用，其后所列词是对应非优选词等同的优选词</p></li>
+                    <li class="list-group-item">D <p style="text-indent:2em;">非优选词指引符。只在优选词下使用，其后所列词是该优选词对应的非优选词</p></li>
+                    <li class="list-group-item">S <p style="text-indent:2em;">上位优选词指引符。其后所列优选词是本条优选词的上位词</p></li>
+                    <li class="list-group-item">F <p style="text-indent:2em;">下位优选词指引符。其后所列优选词是本条优选词的下位词</p></li>
+                    <li class="list-group-item">Z <p style="text-indent:2em;">指向族首词指引符。其后所列优选词是本条优选词的族首词</p></li>
+                    <li class="list-group-item">C <p style="text-indent:2em;">相关优选词指引符，其后优选词是本条优选词的相关优选词</p></li>
+                </ul>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
