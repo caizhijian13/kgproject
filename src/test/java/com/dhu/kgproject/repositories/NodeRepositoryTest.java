@@ -40,15 +40,16 @@ public class NodeRepositoryTest {
 
     @Test
     public void findByNameTest(){
-        Node node = repository.findByName("相关标准");
-        System.out.println(node.getName());
+        Node node = repository.findByName("字母型");
+        System.out.println(node);
     }
 
     @Test
     public void selectgraph(){
         Collection<Node> nodes = repository.selectgraph("字母形");
         for (Node node: nodes){
-            System.out.println(node.getRelationships());
+//            System.out.println(node.getRelationships());
+            System.out.println(node);
         }
     }
 }

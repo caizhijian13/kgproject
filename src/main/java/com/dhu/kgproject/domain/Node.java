@@ -25,7 +25,65 @@ public class Node {
 
     @JsonIgnore
     @org.neo4j.ogm.annotation.Relationship(type = "Include")
-    private List<Relationship> relationships;
+    private List<Relationship> LowerInclude;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "INCLUDE")
+    private List<Relationship> UpperInclude;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "DesignTrend")
+    private List<Relationship> DesignTrend;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "TrendFabric")
+    private List<Relationship> TrendFabric;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "FabricDesign")
+    private List<Relationship> FabricDesign;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "Attribute_of")
+    private List<Relationship> Attribute_of;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "Instance_of")
+    private List<Relationship> Instance_of;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "Part_of")
+    private List<Relationship> Part_of;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "Kind_of")
+    private List<Relationship> Kind_of;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "kind_of")
+    private List<Relationship> LowerKind_of;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "instance_of")
+    private List<Relationship> LowerInstance_of;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "NEXT")
+    private List<Relationship> Next;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "适合")
+    private List<Relationship> fit;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "不适合")
+    private List<Relationship> Unfit;
+
+    @JsonIgnore
+    @org.neo4j.ogm.annotation.Relationship(type = "匹配")
+    private List<Relationship> Match;
+
+
 
     public Node() {
     }

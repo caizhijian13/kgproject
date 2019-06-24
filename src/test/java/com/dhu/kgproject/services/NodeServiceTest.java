@@ -30,10 +30,11 @@ public class NodeServiceTest {
         Collection<Node> nodes = nodeService.findNodesByNameLike("字母形");
         for (Node node: nodes
              ) {
-            System.out.println(node.getName());
-            System.out.println(node.getDescription());
-            System.out.println(node.getType());
-            System.out.println(node.getRelationships());
+            System.out.println(node);
+//            System.out.println(node.getName());
+//            System.out.println(node.getDescription());
+//            System.out.println(node.getType());
+//            System.out.println(node.getRelationships());
         }
     }
 

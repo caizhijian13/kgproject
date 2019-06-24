@@ -8,8 +8,8 @@ import org.neo4j.ogm.annotation.StartNode;
 import java.util.ArrayList;
 import java.util.List;
 
-@RelationshipEntity(type = "Include")
-public class Relationship {
+@RelationshipEntity
+public abstract class Relationship {
 
     private Long id;
     private List<Relationship> relationships = new ArrayList<>();
