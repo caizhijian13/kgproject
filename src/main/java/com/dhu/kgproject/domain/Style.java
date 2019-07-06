@@ -7,5 +7,5 @@ import org.neo4j.ogm.annotation.NodeEntity;
 @NodeEntity
 public class Style extends Node {
     private String styleid;
-
+    public Style(){}
 }

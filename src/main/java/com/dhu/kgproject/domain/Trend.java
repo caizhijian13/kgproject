@@ -9,4 +9,5 @@ public class Trend extends Node {
     private String trendid;
     private String year;
     private String sex;
+    public Trend(){}
 }

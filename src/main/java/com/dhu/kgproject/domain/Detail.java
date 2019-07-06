@@ -6,4 +6,5 @@ import org.neo4j.ogm.annotation.NodeEntity;
 @Data
 @NodeEntity
 public class Detail extends Node {
+    public Detail(){}
 }

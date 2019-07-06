@@ -35,7 +35,7 @@
     <!--//Metis Menu -->
 
 </head>
-<body class="cbp-spmenu-push">
+<body class="cbp-spmenu-push" >
     <!--left-fixed -navigation-->
     <!-- header-starts -->
     <nav class="navbar navbar-default">
@@ -108,7 +108,6 @@
         <div class="col-lg-12 col-md-12">
             <div class="jumbotron text-center" >
                 <h1>纺织服装知识图谱</h1>
-                </br>
                 <div class="col-lg-6 " style="margin-left: 25%">
                     <form role="search" class="navbar-form" id="search" onsubmit="return checkForm1();"  action="/search" method="post">
                         <div class="input-group ">
@@ -131,7 +130,7 @@
 <!--</div>-->
     <div class="row">
         <div class="col-md-3 text-center" >
-            <h3 >流行趋势版块</h3>
+            <!--<h3 >流行趋势版块</h3>-->
             <!--<img style="width: 100%" src="../static/images/index1.png"/>-->
             <div class="btn-group " role="group" aria-label="...">
                 <!--<button type="button" class="btn btn-default">色彩</button>-->
@@ -140,6 +139,7 @@
                 <!--<button type="button" class="btn btn-default">廓形</button>-->
                 <!--<button type="button" class="btn btn-default">面料</button>-->
                 <ul class="sidebar-menu" >
+
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-laptop"></i>
@@ -155,62 +155,62 @@
                             <li><a href="http://10.199.157.176:8080/fabric.html?name=面料">面料</a></li>
                         </ul>
                     </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-3 text-center">
-            <h3>面辅料知识版块</h3>
-            <!--<img style="width: 100%" src="../static/images/index2.png"/>-->
-            <ul class="sidebar-menu" >
-                <li class="treeview">
-                    <a href="http://10.199.157.176:5000/?id=656">
-                        <i class="fa fa-laptop"></i>
-                        <span>面料</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
+
+
+                    <li class="treeview">
+                        <a href="/search?search_name=面料">
+                            <i class="fa fa-laptop"></i>
+                            <span>面辅料知识</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
                     <ul class="treeview-menu">
-                        <li><a href="http://10.199.157.176:5000/?id=658"><i class="fa fa-angle-right"></i> 毛</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=659"><i class="fa fa-angle-right"></i> 丝</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=209"><i class="fa fa-angle-right"></i> 棉</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=661"><i class="fa fa-angle-right"></i> 麻</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=662"><i class="fa fa-angle-right"></i> 仿麻</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=660"><i class="fa fa-angle-right"></i> 仿丝</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=370"><i class="fa fa-angle-right"></i> 针织物</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=944"><i class="fa fa-angle-right"></i> 坯布</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=743"><i class="fa fa-angle-right"></i> 混纺、交织物</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=376"><i class="fa fa-angle-right"></i> 化纤织物</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=519"><i class="fa fa-angle-right"></i> 色织、提花、印花布</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=210"><i class="fa fa-angle-right"></i> 新型纺织材料</a></li>
+                    <li class="treeview">
+                        <a href="http://10.199.157.176:5000/?id=656">
+                            <i class="fa fa-laptop"></i>
+                            <span>面料</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="http://10.199.157.176:5000/?id=658"><i class="fa fa-angle-right"></i> 毛</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=659"><i class="fa fa-angle-right"></i> 丝</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=209"><i class="fa fa-angle-right"></i> 棉</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=661"><i class="fa fa-angle-right"></i> 麻</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=662"><i class="fa fa-angle-right"></i> 仿麻</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=660"><i class="fa fa-angle-right"></i> 仿丝</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=370"><i class="fa fa-angle-right"></i> 针织物</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=944"><i class="fa fa-angle-right"></i> 坯布</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=743"><i class="fa fa-angle-right"></i> 混纺、交织物</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=376"><i class="fa fa-angle-right"></i> 化纤织物</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=519"><i class="fa fa-angle-right"></i> 色织、提花、印花布</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=210"><i class="fa fa-angle-right"></i> 新型纺织材料</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="http://10.199.157.176:5000/?id=657">
+                            <i class="fa fa-laptop"></i>
+                            <span>辅料</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="http://10.199.157.176:5000/?id=212"><i class="fa fa-angle-right"></i> 花边</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=211"><i class="fa fa-angle-right"></i> 纽扣</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=216"><i class="fa fa-angle-right"></i> 衬布、垫</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=213"><i class="fa fa-angle-right"></i> 带、绳、线</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=214"><i class="fa fa-angle-right"></i> 洗唛、商标、挂牌</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=215"><i class="fa fa-angle-right"></i> 拉链、拉头</a></li>
+                            <li><a href="http://10.199.157.176:5000/?id=217"><i class="fa fa-angle-right"></i> 其他辅料</a></li>
+                        </ul>
+                    </li>
                     </ul>
-                </li>
-                <li class="treeview">
-                    <a href="http://10.199.157.176:5000/?id=657">
-                        <i class="fa fa-laptop"></i>
-                        <span>辅料</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="/search?search_name=服装设计">
+                            <i class="fa fa-laptop"></i>
+                            <span>服装设计知识</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
                     <ul class="treeview-menu">
-                        <li><a href="http://10.199.157.176:5000/?id=212"><i class="fa fa-angle-right"></i> 花边</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=211"><i class="fa fa-angle-right"></i> 纽扣</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=216"><i class="fa fa-angle-right"></i> 衬布、垫</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=213"><i class="fa fa-angle-right"></i> 带、绳、线</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=214"><i class="fa fa-angle-right"></i> 洗唛、商标、挂牌</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=215"><i class="fa fa-angle-right"></i> 拉链、拉头</a></li>
-                        <li><a href="http://10.199.157.176:5000/?id=217"><i class="fa fa-angle-right"></i> 其他辅料</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-3 text-center">
-            <h3>服装设计知识版块</h3>
-            <!--<img style="width: 100%" src="../static/images/index3.png"/>-->
-            <div class="btn-group " role="group" aria-label="...">
-                <!--<button type="button" class="btn btn-default">色彩</button>-->
-                <!--<button type="button" class="btn btn-default">风格</button>-->
-                <!--<button type="button" class="btn btn-default">细节</button>-->
-                <!--<button type="button" class="btn btn-default">廓形</button>-->
-                <!--<button type="button" class="btn btn-default">面料</button>-->
-                <ul class="sidebar-menu" >
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-laptop"></i>
@@ -239,71 +239,120 @@
                         </a>
 
                     </li>
+                    </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="/search?search_name=相关技术">
+                            <i class="fa fa-laptop"></i>
+                            <span>智能制造</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                    <ul class="treeview-menu">
+                    <li class="treeview">
+                        <a href="/search?search_name=相关技术">
+                            <i class="fa fa-laptop"></i>
+                            <span>相关技术</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/search?search_name=人工智能"><i class="fa fa-angle-right"></i> 人工智能</a></li>
+                            <li><a href="/search?search_name=CPS嵌入式系统"><i class="fa fa-angle-right"></i> CPS嵌入式系统</a></li>
+                            <li><a href="/search?search_name=信息安全"><i class="fa fa-angle-right"></i> 信息安全</a></li>
+                            <li><a href="/search?search_name=云计算"><i class="fa fa-angle-right"></i> 云计算</a></li>
+                            <li><a href="/search?search_name=网络技术"><i class="fa fa-angle-right"></i> 网络技术</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="/search?search_name=工业4.0">
+                            <i class="fa fa-laptop"></i>
+                            <span>工业4.0</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/search?search_name=相关标准"><i class="fa fa-angle-right"></i> 相关标准</a></li>
+                            <li><a href="/search?search_name=参考体系"><i class="fa fa-angle-right"></i> 参考体系</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="/search?search_name=智慧工厂">
+                            <i class="fa fa-laptop"></i>
+                            <span>智慧工厂</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/search?search_name=智能仓储">智能仓储</a></li>
+                            <li><a href="/search?search_name=智能车间">智能车间</a></li>
+                            <li><a href="/search?search_name=智能品质管理">智能品质管理</a></li>
+                            <li><a href="/search?search_name=集成ERP系统">集成ERP系统</a></li>
+                            <li><a href="/search?search_name=集成MES系统">集成MES系统</a></li>
+                            <li><a href="/search?search_name=追溯管理">追溯管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="/search?search_name=智能生产">
+                            <i class="fa fa-laptop"></i>
+                            <span>智能生产</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/search?search_name=石油石化智能成套设备">石油石化智能成套设备</a></li>
+                            <li><a href="/search?search_name=冶金智能成套设备">冶金智能成套设备</a></li>
+                            <li><a href="/search?search_name=智能化成形和加工成套设备">智能化成形和加工成套设备</a></li>
+                            <li><a href="/search?search_name=自动化物流成套设备">自动化物流成套设备</a></li>
+                            <li><a href="/search?search_name=建材制造成套设备">建材制造成套设备</a></li>
+                            <li><a href="/search?search_name=智能化食品制造生产线">智能化食品制造生产线</a></li>
+                            <li><a href="/search?search_name=智能化纺织成套装备">智能化纺织成套装备</a></li>
+                            <li><a href="/search?search_name=智能化印刷装备">智能化印刷装备</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="/search?search_name=穿搭知识">
+                            <i class="fa fa-laptop"></i>
+                            <span>穿搭知识</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="treeview">
+                                <a href="/search?search_name=服装特征">
+                                    <i class="fa fa-laptop"></i>
+                                    <span>服装特征</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="/search?search_name=款式"><i class="fa fa-angle-right"></i> 款式</a></li>
+                                    <li><a href="/search?search_name=材质"><i class="fa fa-angle-right"></i> 材质</a></li>
+                                    <li><a href="/search?search_name=领型"><i class="fa fa-angle-right"></i> 领型</a></li>
+                                    <li><a href="/search?search_name=颜色"><i class="fa fa-angle-right"></i> 颜色</a></li>
+                                </ul>
+                            </li>
+                            <li class="treeview">
+                                <a href="/search?search_name=人体特征">
+                                    <i class="fa fa-laptop"></i>
+                                    <span>人体特征</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="/search?search_name=脸型"><i class="fa fa-angle-right"></i> 脸型</a></li>
+                                    <li><a href="/search?search_name=发型"><i class="fa fa-angle-right"></i> 发型</a></li>
+                                    <li><a href="/search?search_name=身材"><i class="fa fa-angle-right"></i> 身材</a></li>
+                                    <li><a href="/search?search_name=肤色"><i class="fa fa-angle-right"></i> 肤色</a></li>
+                                    <li><a href="/search?search_name=缺点"><i class="fa fa-angle-right"></i> 缺点</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/search?search_name=风格"><i class="fa fa-angle-right"></i> 风格</a></li>
+                            <li><a href="/search?search_name=配饰"><i class="fa fa-angle-right"></i> 配饰</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="col-md-3 text-center">
-            <h3>智能制造版块</h3>
-            <!--<img style="width: 100%" src="../static/images/index4.png"/>-->
-            <ul class="sidebar-menu" >
-                <li class="treeview">
-                    <a href="/search?search_name=相关技术">
-                        <i class="fa fa-laptop"></i>
-                        <span>相关技术</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="/search?search_name=人工智能"><i class="fa fa-angle-right"></i> 人工智能</a></li>
-                        <li><a href="/search?search_name=CPS嵌入式系统"><i class="fa fa-angle-right"></i> CPS嵌入式系统</a></li>
-                        <li><a href="/search?search_name=信息安全"><i class="fa fa-angle-right"></i> 信息安全</a></li>
-                        <li><a href="/search?search_name=云计算"><i class="fa fa-angle-right"></i> 云计算</a></li>
-                        <li><a href="/search?search_name=网络技术"><i class="fa fa-angle-right"></i> 网络技术</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="/search?search_name=工业4.0">
-                        <i class="fa fa-laptop"></i>
-                        <span>工业4.0</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="/search?search_name=相关标准"><i class="fa fa-angle-right"></i> 相关标准</a></li>
-                        <li><a href="/search?search_name=参考体系"><i class="fa fa-angle-right"></i> 参考体系</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="/search?search_name=智慧工厂">
-                        <i class="fa fa-laptop"></i>
-                        <span>智慧工厂</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="/search?search_name=智能仓储">智能仓储</a></li>
-                        <li><a href="/search?search_name=智能车间">智能车间</a></li>
-                        <li><a href="/search?search_name=智能品质管理">智能品质管理</a></li>
-                        <li><a href="/search?search_name=集成ERP系统">集成ERP系统</a></li>
-                        <li><a href="/search?search_name=集成MES系统">集成MES系统</a></li>
-                        <li><a href="/search?search_name=追溯管理">追溯管理</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="/search?search_name=智能生产">
-                        <i class="fa fa-laptop"></i>
-                        <span>智能生产</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="/search?search_name=石油石化智能成套设备">石油石化智能成套设备</a></li>
-                        <li><a href="/search?search_name=冶金智能成套设备">冶金智能成套设备</a></li>
-                        <li><a href="/search?search_name=智能化成形和加工成套设备">智能化成形和加工成套设备</a></li>
-                        <li><a href="/search?search_name=自动化物流成套设备">自动化物流成套设备</a></li>
-                        <li><a href="/search?search_name=建材制造成套设备">建材制造成套设备</a></li>
-                        <li><a href="/search?search_name=智能化食品制造生产线">智能化食品制造生产线</a></li>
-                        <li><a href="/search?search_name=智能化纺织成套装备">智能化纺织成套装备</a></li>
-                        <li><a href="/search?search_name=智能化印刷装备">智能化印刷装备</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+        <div class="col-md-9">
+            <div id="graph"></div>
         </div>
     </div>
 </body>
@@ -381,5 +430,299 @@
 <!-- Bootstrap Core JavaScript -->
 <script th:src="@{/js/bootstrap.js}"> </script>
 
+<script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+<script>
+    window.onload = draw("纺织服装领域");
+
+    function drawById(id) {
+        $("#graph").empty();
+        var mark = id;
+        var width = 1200;
+        var height = 500;
+
+        var force = d3.layout.force()
+            .size([width,height])    //指定范围
+            .linkDistance(100)       //指定连线长度
+            .charge(-400);           //相互之间的作用力
+
+        var svg = d3.select("#graph").append("svg")
+            .attr("width",width).attr("height",height)
+            .attr("pointer-events","all");
+
+        d3.json("/selectgraphById?id="+mark,function (error,graph) {
+            if(error) return;
+
+            force.nodes(graph.nodes).links(graph.links).start();
+
+            //箭头
+            var marker = svg.append("marker")
+                .attr("id","resolved")
+                .attr("markerUnits","userSpaceOnUse")
+                .attr("viewBox","0 -5 10 10")   //坐标系的区域
+                .attr("refX",32)
+                .attr("refY",-1)
+                .attr("markerWidth",10)//标识的大小
+                .attr("markerHeight",10)
+                .attr("orient","auto")//绘制方向，可设定为：auto（自动确认方向）和角度值
+                .attr("stroke-width",2)//箭头宽度
+                .append("path")
+                .attr("d","M0,-5L10,0L0,5")//箭头的路径
+                .attr('fill','#000000');//箭头颜色
+
+            //设置连接线
+            var svg_edges = svg.selectAll(".link")
+                .data(graph.links)
+                .enter()
+                .append("line")
+                .attr({
+                    // 'd': function (d) { return 'M '+d.source.x+' '+d.source.y+' L '+d.target.x+' '+d.target.y},
+                    'class': 'link',
+                    'id':function (d,i) {return 'link'+i;}
+                })
+                .attr("marker-end","url(#resolved)")//根据箭头标记的id号标记箭头
+
+            //线上文字
+            var links_text = svg
+                .selectAll(".text")
+                .data(graph.links)
+                .enter()
+                .append("text")
+                .style("fill","black")
+                .attr("x",function(e){
+                    console.log(e.source.x+"+"+e.target.x);
+                    return (e.source.x+e.target.x)/2;
+                })
+                .attr("y",function(e){
+                    console.log(e.source.y+"+"+e.target.y);
+                    console.log(e.type);
+                    return (e.source.y+e.target.y)/2;
+                })
+                .attr("font-size",8)
+                .text(function(e){
+                    return e.type}); //线上文字
+
+            //添加节点
+            var svg_nodes = svg.selectAll(".node")
+                .data(graph.nodes)
+                .enter()
+                .append("circle")
+                .attr('r',function (d) {
+                    if(d.label=="node")
+                        return 30-2*d.label;
+                    else
+                        return 20;
+                })
+                .attr("class",function (d) {
+                    if(d.label=="node")
+                        return "node "+"no"+d.level;
+                    else
+                        return "node "+d.label;
+                })
+                // .on("click",function (d) {
+                //     nowname = d.name;
+                //     showDetail(d.id);
+                // })
+                .call(force.drag)
+                .on("dblclick",function (d) {
+                    nowname = d.name;
+                    var url = "/search?search_name="+d.name;
+                    if (d.name == "相关标准") {
+                        // var url = encodeURI("standards.html");
+                        location.href = "/standards";
+                    }
+                    else{
+                        drawById(d.id);
+                    }
+                    // location.href = url;
+
+                })
+            ;
+            svg_nodes.append("title")
+                .text(function (d) {
+                    return d.description;
+                })
+            //添加描述节点的文字
+            var svg_texts = svg.selectAll(".text")
+                .data(graph.nodes)
+                .enter()
+                .append("text")
+                .style("fill","black")
+                .attr("class","text")
+                .attr("text-anchor","middle")
+                .text(function (d) {
+                    return d.name;
+                })
+
+            force.on("tick",function () {  //对于每一个时间间隔
+
+                //更新连线坐标
+                svg_edges.attr("x1",function (d) {return d.source.x; })
+                    .attr("y1",function (d) {return d.source.y; })
+                    .attr("x2",function (d) {return d.target.x; })
+                    .attr("y2",function (d) {return d.target.y; })
+                //更新线上文字坐标
+                links_text
+                    .attr("x",function(e){
+                        return (e.source.x+e.target.x)/2;
+                    })
+                    .attr("y",function(e){
+                        return (e.source.y+e.target.y)/2;
+                    });
+                //更新节点坐标
+                svg_nodes.attr("cx",function (d) {return d.x=Math.max(20,Math.min(width-20,d.x)); })
+                    .attr("cy",function (d) {return d.y=Math.max(20,Math.min(width-20,d.y)); })
+
+                //更新文字坐标
+                svg_texts.attr("x",function (d) {return d.x; })
+                    .attr("y",function (d) {return d.y; })
+
+            });
+        });
+
+    }
+    function draw(name) {
+        $("#graph").empty();
+        var mark = name;
+        var width = 1200;
+        var height = 500;
+
+        var force = d3.layout.force()
+            .size([width,height])    //指定范围
+            .linkDistance(100)       //指定连线长度
+            .charge(-400);           //相互之间的作用力
+
+        var svg = d3.select("#graph").append("svg")
+            .attr("width",width).attr("height",height)
+            .attr("pointer-events","all");
+
+        d3.json("/selectgraph?name="+mark,function (error,graph) {
+            if(error) return;
+
+            force.nodes(graph.nodes).links(graph.links).start();
+
+            //箭头
+            var marker = svg.append("marker")
+                .attr("id","resolved")
+                .attr("markerUnits","userSpaceOnUse")
+                .attr("viewBox","0 -5 10 10")   //坐标系的区域
+                .attr("refX",32)
+                .attr("refY",-1)
+                .attr("markerWidth",10)//标识的大小
+                .attr("markerHeight",10)
+                .attr("orient","auto")//绘制方向，可设定为：auto（自动确认方向）和角度值
+                .attr("stroke-width",2)//箭头宽度
+                .append("path")
+                .attr("d","M0,-5L10,0L0,5")//箭头的路径
+                .attr('fill','#000000');//箭头颜色
+
+            //设置连接线
+            var svg_edges = svg.selectAll(".link")
+                .data(graph.links)
+                .enter()
+                .append("line")
+                .attr({
+                    // 'd': function (d) { return 'M '+d.source.x+' '+d.source.y+' L '+d.target.x+' '+d.target.y},
+                    'class': 'link',
+                    'id':function (d,i) {return 'link'+i;}
+                })
+                .attr("marker-end","url(#resolved)")//根据箭头标记的id号标记箭头
+
+            //线上文字
+            var links_text = svg
+                .selectAll(".text")
+                .data(graph.links)
+                .enter()
+                .append("text")
+                .style("fill","black")
+                .attr("x",function(e){
+                    console.log(e.source.x+"+"+e.target.x);
+                    return (e.source.x+e.target.x)/2;
+                })
+                .attr("y",function(e){
+                    console.log(e.source.y+"+"+e.target.y);
+                    console.log(e.type);
+                    return (e.source.y+e.target.y)/2;
+                })
+                .attr("font-size",8)
+                .text(function(e){
+                    return e.type}); //线上文字
+
+            //添加节点
+            var svg_nodes = svg.selectAll(".node")
+                .data(graph.nodes)
+                .enter()
+                .append("circle")
+                .attr('r',function (d) {
+                    if(d.label=="node")
+                        return 30-2*d.label;
+                    else
+                        return 20;
+                })
+                .attr("class",function (d) {
+                    if(d.label=="node")
+                        return "node "+"no"+d.level;
+                    else
+                        return "node "+d.label;
+                })
+                // .on("click",function (d) {
+                //     nowname = d.name;
+                //     showDetail(d.id);
+                // })
+                .call(force.drag)
+                .on("dblclick",function (d) {
+                    var url = "/search?search_name="+d.name;
+                    if (d.name == "相关标准") {
+                        // var url = encodeURI("standards.html");
+                        location.href = "/standards";
+                    }
+                    else
+                    // location.href = url;
+                        drawById(d.id);
+                })
+            ;
+            svg_nodes.append("title")
+                .text(function (d) {
+                    return d.description;
+                })
+            //添加描述节点的文字
+            var svg_texts = svg.selectAll(".text")
+                .data(graph.nodes)
+                .enter()
+                .append("text")
+                .style("fill","black")
+                .attr("class","text")
+                .attr("text-anchor","middle")
+                .text(function (d) {
+                    return d.name;
+                })
+
+            force.on("tick",function () {  //对于每一个时间间隔
+
+                //更新连线坐标
+                svg_edges.attr("x1",function (d) {return d.source.x; })
+                    .attr("y1",function (d) {return d.source.y; })
+                    .attr("x2",function (d) {return d.target.x; })
+                    .attr("y2",function (d) {return d.target.y; })
+                //更新线上文字坐标
+                links_text
+                    .attr("x",function(e){
+                        return (e.source.x+e.target.x)/2;
+                    })
+                    .attr("y",function(e){
+                        return (e.source.y+e.target.y)/2;
+                    });
+                //更新节点坐标
+                svg_nodes.attr("cx",function (d) {return d.x=Math.max(20,Math.min(width-20,d.x)); })
+                    .attr("cy",function (d) {return d.y=Math.max(20,Math.min(width-20,d.y)); })
+
+                //更新文字坐标
+                svg_texts.attr("x",function (d) {return d.x; })
+                    .attr("y",function (d) {return d.y; })
+
+            });
+        });
+
+    }
+</script>
 </body>
 </html>

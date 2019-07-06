@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -41,6 +42,13 @@ public class NodeController {
         return nodeService.selectgraph(name);
     }
 
+    @GetMapping("/selectgraphById")
+    @ResponseBody
+    public Map<String,Object> selectgraphById(@RequestParam(value = "id",required = false)Long id){
+        return nodeService.selectgraphById(id);
+    }
+
+
     @RequestMapping("/search")
     public ModelAndView showResult(@RequestParam( value = "search_name") String search_name, Model model){
         String name = search_name;
@@ -51,7 +59,7 @@ public class NodeController {
 
         Node node = nodeService.findByName(name);
 
-        Node node_null = new Node(null,null,null,null);
+        Node node_null = new Node(null,null,null,null,null,null,null);
 
         model.addAttribute("name",name);
         model.addAttribute("infolist",nodes);
@@ -64,6 +72,25 @@ public class NodeController {
             return new ModelAndView("error","model",model);
         }
 
+    }
+    @RequestMapping("/search_detail")
+    public ModelAndView showDetail(@RequestParam(value = "detailName") String name,Model model){
+        model.addAttribute("name",name);
+//        String name1 = name;
+
+        String namelike = "%"+name+"%";
+
+        Node node = nodeService.findByName(name);
+
+        Map<String, String> labelList = new HashMap<>();
+        Long id = node.getId();
+        Collection<Node> nodeList = nodeService.selectRelatedNodes(id);
+
+        model.addAttribute("node",node);
+
+        model.addAttribute("nodeList",nodeList);
+
+        return new ModelAndView("show_detail","model",model);
     }
 //    @RequestParam(value = "search_name") String search_name, Model model){
 //        Node node = nodeService.findByName(search_name);

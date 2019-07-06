@@ -4,7 +4,8 @@ import lombok.Data;
 import org.neo4j.ogm.annotation.NodeEntity;
 
 @Data
-@NodeEntity
+@NodeEntity(label = "Example")
 public class Example extends Node {
+    public Example(){}
     private String moulde;
 }

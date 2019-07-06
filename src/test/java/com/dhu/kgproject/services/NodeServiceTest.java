@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.Map;
@@ -41,6 +42,14 @@ public class NodeServiceTest {
     @Test
     public void findGrgph(){
         System.out.println(nodeService.selectgraph("字母形"));
+    }
+
+    @Test
+    public void selectGById(){
+        Integer a = 1699;
+        Long b = a.longValue();
+        System.out.println(a.longValue());
+        System.out.println(nodeService.selectgraphById(b));
     }
 
 }

@@ -1,11 +1,25 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="page-head-link">
-    <title>详情页</title>
+<head>
+    <title >详情页面</title>
+    <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Classic Style Responsive web templates, Bootstrap Web Templates, Flat Web Templates, Android Compatible web templates,
+    Smartphone Compatible web templates, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- //for-mobile-apps -->
+    <!--<link href="css/bootstrap.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all"/>-->
+    <!--<link href="css/style.css" th:href="@{/css/style.css}"  rel="stylesheet" type="text/css" media="all"/>-->
+
+    <!-- //for-mobile-apps -->
+    <link href="css1/bootstrap.css" th:href="@{/css1/bootstrap.css}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css1/style.css" th:href="@{/css1/style.css}"  rel="stylesheet" type="text/css" media="all"/>
+    <!-- //animation-effect -->
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap Core CSS -->
     <link th:href="@{/css/bootstrap.css}" rel='stylesheet' type='text/css' />
@@ -34,24 +48,14 @@
     <link href="/css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
 
+
+
 </head>
-<style>
-    .text { font-size: 10px; pointer-events: none; }
-    .node { fill:#bee0fc; stroke: #bee0fc; stroke-width: 1px; }
-    .node.no1{fill:#483d8b;}
-    .node.no2{fill:#4169e1;}
-    .node.no3{fill:#1e90ff;}
-    .node.no4{fill:#20b2aa;}
-    .node.no5{fill:#8fbc8f;}
-    .node.no6{fill:#7fffd4;}
-    .node.design{fill:#008800;}
-    .node.lfabric{fill:#ff0000;}
-    .link { stroke: #999; stroke-opacity: .6; stroke-width: 3px; }
-    a{text-decoration:none;}
-    a:hover{text-decoration:none; color:"black";}
-    .img-responsive { display: block; height: auto; max-width: 90%; }
-</style>
-<body class="cbp-spmenu-push">
+
+<body>
+<!-- header -->
+<!-- //header -->
+<!--Navigation-->
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -68,16 +72,16 @@
                 <ul class="nav navbar-nav navbar-left">
                     <li>
                         <!--<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
-                        <a href="#">首页</a>
+                        <a href="http://10.199.157.176:8081">首页</a>
                         <!--</button>-->
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">相关知识导航 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="10.199.157.176:8000">服装设计知识</a> </li>
-                            <li><a href="10.199.157.176:5000">面辅料信息检索</a> </li>
-                            <li><a href="10.199.157.176:8080">流行趋势速知</a> </li>
-                            <li><a href="#">工业4.0相关标准</a> </li>
+                            <li><a href="http://10.199.157.176:8000">服装设计知识</a> </li>
+                            <li><a href="http://10.199.157.176:5000">面辅料信息检索</a> </li>
+                            <li><a href="http://10.199.157.176:8080">流行趋势速知</a> </li>
+                            <li><a href="/standards">工业4.0相关标准</a> </li>
                         </ul>
                     </li>
                 </ul>
@@ -114,47 +118,104 @@
         </div>
     </div>
 </nav>
-</body>
-<script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
-<script>
+<!-- Navigation -->
 
-</script>
-<!--&lt;!&ndash; side nav js &ndash;&gt;-->
-<!--<script th:src="@{/js/SidebarNav.min.js}" type='text/javascript'></script>-->
-<!--<script>-->
-<!--$('.sidebar-menu').SidebarNav()-->
-<!--</script>-->
-<!--&lt;!&ndash; //side nav js &ndash;&gt;-->
+<!--content-->
+<div class="product">
+    <div class="container">
+        <div class="col-md-12 animated wow fadeInRight" data-wow-delay=".5s">
+            <div class="col-md-5 grid-im">
+                <div class="flexslider">
 
-<!--&lt;!&ndash; Classie &ndash;&gt;&lt;!&ndash; for toggle left push menu script &ndash;&gt;-->
-<!--<script th:src="@{/js/classie.js}"></script>-->
-<!--<script>-->
-<!--var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),-->
-<!--showLeftPush = document.getElementById( 'showLeftPush' ),-->
-<!--body = document.body;-->
 
-<!--showLeftPush.onclick = function() {-->
-<!--classie.toggle( this, 'active' );-->
-<!--classie.toggle( body, 'cbp-spmenu-push-toright' );-->
-<!--classie.toggle( menuLeft, 'cbp-spmenu-open' );-->
-<!--disableOther( 'showLeftPush' );-->
-<!--};-->
+                    <div class="thumb-image"> <img  th:src="@{'/images/'+ ${node.image}}" src="/images/Figure4.png" data-imagezoom="true" class="img-responsive"> </div>
 
-<!--function disableOther( button ) {-->
-<!--if( button !== 'showLeftPush' ) {-->
-<!--classie.toggle( showLeftPush, 'disabled' );-->
-<!--}-->
-<!--}-->
-<!--</script>-->
-<!-- //Classie --><!-- //for toggle left push menu script -->
+                </div>
+            </div>
+            <div class="col-md-7 single-top-in">
+                <div class="span_2_of_a1 simpleCart_shelfItem">
+                    <h3 th:text="${node.name}">苹果型身材</h3>
+                    <p class="in-para" th:text="${node.description}" > 苹果型身材是指下肢纤细修长、腰腹却突出的浑圆，类似于中年男性的体型，又称为男性型肥胖。代表明星：陈妍希、张惠妹。苹果型穿衣重点是：提高腰线，露出最纤细的地方。 选择腰线在胸下的服装做内搭，打造高腰线，再将开衫/外套敞开穿，就能够挡住腰部，达到显瘦效果哦。上衣最好选择简约有垂坠感的，避免有膨胀感的印花、刺绣、金属光泽等的面料。</p>
+                    <!-- <div class="price_single">
+                      <span class="reducedfrom item_price">别名</span>
+                      <span class="reducedfrom item_price">男性型肥胖</span>
+                     <a href="#" data-text="Add To Cart" class="but-hover1 item_add">Add To Cart</a>
+                     <div class="clearfix"></div>
+                    </div> -->
+                    <div class="clearfix"> </div>
+                </div>
+                <!----- tabs-box ---->
+                <div class="sap_tabs">
+                    <div id="horizontalTab" style="display: block; width: 100%;">
+                        <ul class="resp-tabs-list" style="margin-top: 10px;">
+                            <li class="resp-tab-item " role="tab"><span >别名</span></li>
+                            <li class="resp-tab-item"  role="tab"><span th:text="${node.otherName}">男性型肥胖</span></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <ul class="resp-tabs-list" style="margin-top: 10px;">
+                            <li class="resp-tab-item " role="tab"><span>缺点</span></li>
+                            <li class="resp-tab-item"  role="tab"><span th:text="${node.shortcoming}">小肚腩</span></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                        <ul class="resp-tabs-list" style="margin-top: 10px;">
+                            <li class="resp-tab-item " role="tab"><span>明星</span></li>
+                            <li class="resp-tab-item"  role="tab"><span th:text="${node.star}">陈妍希</span></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </div>
+                    <!-- <script src="js/easyResponsiveTabs.js" type="text/javascript"></script> -->
 
-<!--scrolling js-->
-<script th:src="@{/js/jquery.nicescroll.js}"></script>
-<script th:src="@{/js/scripts.js}"></script>
-<!--//scrolling js-->
+                    <!---->
+                </div>
 
-<!-- Bootstrap Core JavaScript -->
-<script th:src="@{/js/bootstrap.js}"> </script>
+            </div>
+            <!----->
+            <div class="clearfix"> </div>
+            <div class=" col-md-si"  >
+                <div style="margin-bottom: 10px">
+                    <h3 >相关节点</h3>
+                    <hr style="border-width: 5px">
+                </div>
+                <div class="col-sm-3 item-grid simpleCart_shelfItem" th:each="nodeR:${nodeList}">
+                    <div class="grid-pro">
+                        <div  class=" grid-product " >
+                            <figure>
+                                <a href="#">
+                                    <div class="grid-img">
+                                        <img  th:src="@{'/images/'+ ${nodeR.image}}" src="/images/Figure1.png" class="img-responsive" style="width:160px; height: 200px; display:block; " alt="">
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="women">
+                            <h6><a href="#" th:href="@{'/search_detail?detailName='+${nodeR.name}}" th:text="${nodeR.name}">直筒型身材</a></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--//products-->
+</div>
+
+    <script src="js/imagezoom.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script defer src="js/jquery.flexslider.js"></script>
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+    <script>
+        // Can also be used with $(document).ready()
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: "thumbnails"
+            });
+        });
+    </script>
 
 </body>
 </html>

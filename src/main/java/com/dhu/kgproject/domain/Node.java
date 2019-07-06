@@ -21,7 +21,12 @@ public class Node {
     private String level;
     private String description;
     private String type;
-    private String img_url;
+    private String url;
+    private String image;
+    private String feature;
+    private String star;
+    private String shortcoming;
+    private String otherName;
 
     @JsonIgnore
     @org.neo4j.ogm.annotation.Relationship(type = "Include")
@@ -88,11 +93,21 @@ public class Node {
     public Node() {
     }
 
-    public Node(Long id, String name,String level ,String describe) {
+    public Node(Long id, String name, String level, String description, String type,String img_url,String url) {
         this.id = id;
         this.name = name;
         this.level = level;
-        this.description = describe;
+        this.description = description;
+        this.type = type;
+        this.url = url;
+        this.image = img_url;
     }
-
+//    public Node(Long id, String name, String level, String description, String type, String img_url) {
+//        this.id = id;
+//        this.name = name;
+//        this.level = level;
+//        this.description = description;
+//        this.type = type;
+//        this.img_url = img_url;
+//    }
 }

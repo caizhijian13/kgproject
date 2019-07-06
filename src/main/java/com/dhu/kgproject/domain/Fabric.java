@@ -10,4 +10,5 @@ public class Fabric extends Node {
     private String weave;
     private String figure;
     private String postprocessing;
+    public Fabric(){}
 }

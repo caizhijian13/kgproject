@@ -259,6 +259,12 @@ public class NodeService {
     }
 
     @Transactional(readOnly = true)
+    public Collection<Node> selectRelatedNodes(Long id){
+        Collection<Node> result = repository.selectRelatedNodes(id);
+        return result;
+    }
+
+    @Transactional(readOnly = true)
     public Map<String,Object> selectgraph(String name){
             Collection<Node> result = repository.selectgraph(name);
             return toD3Format(result);
@@ -267,6 +273,12 @@ public class NodeService {
     @Transactional(readOnly = true)
     public Map<String ,Object> graph(int limit){
         Collection<Node> result = repository.graph(limit);
+        return toD3Format(result);
+    }
+
+    @Transactional(readOnly = true)
+    public Map<String,Object> selectgraphById(Long id){
+        Collection<Node> result = repository.selectGraphById(id);
         return toD3Format(result);
     }
 }
