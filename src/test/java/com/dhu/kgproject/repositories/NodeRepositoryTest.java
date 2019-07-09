@@ -50,12 +50,6 @@ public class NodeRepositoryTest {
     }
 
     @Test
-    public void findByNameTest(){
-        Node node = repository.findByName("服装面料设计");
-        System.out.println(node.getId());
-    }
-
-    @Test
     public void selectgraph(){
         Collection<Node> nodes = repository.selectgraph("服装款式设计");
         for (Node node: nodes){

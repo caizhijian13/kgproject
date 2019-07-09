@@ -330,7 +330,7 @@ ul.dropdown-menu{
 	-ms-user-select: none;
 	user-select: none;
 	position: absolute;
-	width: 100%;
+	width: 93%;
 	height: 100%;
     cursor: text;
 }

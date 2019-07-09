@@ -18,7 +18,7 @@ public interface NodeRepository extends Neo4jRepository<Node,Long> {
     Node findNodeById(Long id);
 
     @Query("MATCH (n{name:{name}}) return n")
-    Node findByName(@Param("name") String name);
+    Collection<Node> findByName(@Param("name") String name);
 
 //    Collection<Node> findByNameLike(@Param("name") String name);
 
@@ -30,14 +30,16 @@ public interface NodeRepository extends Neo4jRepository<Node,Long> {
     @Query("MATCH (n)-[s]-(m)"+" WHERE n.name={name}"+" RETURN n,s,m")
     Collection<Node> selectgraph(@Param("name") String name);
 
-    @Query("MATCH (n)-[r:class_of]-(m) RETURN n,r,m LIMIT {limit}")
-    Collection<Node> graph(@Param("limit") int limit);
+    @Query("MATCH (n)-[r*1..2]-(m) where id(n)={id} RETURN n,r,m")
+    Collection<Node> graph(@Param("id") Long id);
 
     @Query("MATCH (n)-[s]-(m) WHERE id(n)={id} RETURN n,s,m")
     Collection<Node> selectGraphById(@Param("id") Long id);
 
-    @Query("match(n1)<-[r1:Kind_of]-(m),(n2)<-[r2:Kind_of]-(m) where id(n1)={id} and type(r1)=type(r2) return n2")
+    @Query("match(n1)<-[r1:Kind_of|Include]-(m),(n2)<-[r2:Kind_of|Include]-(m) where id(n1)={id} and type(r1)=type(r2) return n2")
     Collection<Node> selectRelatedNodes(@Param("id") Long id);
 
+    @Query("match(n)-[r*1..]->(m) where id(n)={id} return count(distinct m)")
+    Integer numOfKids(@Param("id") Long id);
 
 }

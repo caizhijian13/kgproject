@@ -20,8 +20,8 @@ public class NodeController {
 
     @GetMapping("/node")
     @ResponseBody
-    public Node findByName(@RequestParam(value = "name",required = false) String name){
-        return nodeService.findByName(name);
+    public Node findByName(@RequestParam(value = "id",required = false) Long id){
+        return nodeService.selectNodeById(id);
     }
 
     @RequestMapping("/nodes")
@@ -32,8 +32,8 @@ public class NodeController {
 
     @GetMapping("/graph")
     @ResponseBody
-    public Map<String,Object> graph(@RequestParam(value = "limit",required = false) Integer limit){
-        return nodeService.graph(limit);
+    public Map<String,Object> graph(@RequestParam(value = "id",required = false) Long id){
+        return nodeService.graph(id);
     }
 
     @GetMapping("/selectgraph")
@@ -48,48 +48,49 @@ public class NodeController {
         return nodeService.selectgraphById(id);
     }
 
+    @RequestMapping("/searchById")
+    public ModelAndView showspecificResult(@RequestParam( value = "detailId")  Long detailId, Model model){
+        System.out.println(detailId);
+        Node node = nodeService.selectNodeById(detailId);
+        model.addAttribute("name",node.getName());
+        model.addAttribute("node",node);
+        model.addAttribute("id",node.getId());
+        return new ModelAndView("show_result", "model", model);
+    }
 
     @RequestMapping("/search")
     public ModelAndView showResult(@RequestParam( value = "search_name") String search_name, Model model){
-        String name = search_name;
-
-        String namelike = "%"+search_name+"%";
-
-        Collection<Node> nodes= nodeService.findNodesByNameLike(name);
-
-        Node node = nodeService.findByName(name);
-
-        Node node_null = new Node(null,null,null,null,null,null,null);
-
-        model.addAttribute("name",name);
-        model.addAttribute("infolist",nodes);
+//        String namelike = "%"+search_name+"%";
+        Collection<Node> nodes= nodeService.findNodesByNameLike(search_name);
+        //Collection<Node> nodelist = nodeService.findByName(search_name);
         if (!nodes.isEmpty()){
-            model.addAttribute("node",node);
-            return new ModelAndView("show_result","model",model);
+            model.addAttribute("name",search_name);
+            model.addAttribute("infolist",nodes);
+            if(nodes.size() == 1) {
+                Node node = nodes.iterator().next();
+                model.addAttribute("node",node );
+                model.addAttribute("id",node.getId());
+                return new ModelAndView("show_result", "model", model);
+            }
+            else{
+                model.addAttribute("nodelist", nodes);
+                return new ModelAndView("index2","model",model);
+            }
         }
         else{
-            model.addAttribute("node",node_null);
             return new ModelAndView("error","model",model);
         }
 
     }
     @RequestMapping("/search_detail")
-    public ModelAndView showDetail(@RequestParam(value = "detailName") String name,Model model){
+    public ModelAndView showDetail(@RequestParam(value = "detailId") Long detailId,Model model){
+        Node node = nodeService.selectNodeById(detailId);
+        String name = node.getName();
         model.addAttribute("name",name);
-//        String name1 = name;
-
-        String namelike = "%"+name+"%";
-
-        Node node = nodeService.findByName(name);
-
         Map<String, String> labelList = new HashMap<>();
-        Long id = node.getId();
-        Collection<Node> nodeList = nodeService.selectRelatedNodes(id);
-
+        Collection<Node> nodeList = nodeService.selectRelatedNodes(detailId);
         model.addAttribute("node",node);
-
         model.addAttribute("nodeList",nodeList);
-
         return new ModelAndView("show_detail","model",model);
     }
 //    @RequestParam(value = "search_name") String search_name, Model model){
@@ -100,6 +101,12 @@ public class NodeController {
 //        model.addAttribute("searchName",search_name);
 //        return  new ModelAndView("show_result","model",model);
 //    }
+
+    @GetMapping("/findKidsById")
+    @ResponseBody
+    public Integer findKidsById(@RequestParam(value = "id",required = false)Long id){
+        return nodeService.numOfKids(id);
+    }
 
     @RequestMapping(value = "/show_result")
     public String toBackshowall(){
@@ -114,12 +121,6 @@ public class NodeController {
     @RequestMapping(value = "/error_result")
     public String toError(){
         return "error";
-    }
-
-    @GetMapping(value = "/ssss")
-    @ResponseBody
-    public String sss(@RequestParam(value = "search_name",required = false) String search_name){
-        return search_name;
     }
 
     @RequestMapping(value = "/standards")

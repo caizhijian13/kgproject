@@ -18,7 +18,7 @@ public class Node {
     @GeneratedValue
     private Long id;
     private String name;
-    private String level;
+//    private String level;
     private String description;
     private String type;
     private String url;
@@ -93,14 +93,17 @@ public class Node {
     public Node() {
     }
 
-    public Node(Long id, String name, String level, String description, String type,String img_url,String url) {
+    public Node(Long id, String name, String description, String type,String img_url,String url) {
         this.id = id;
         this.name = name;
-        this.level = level;
+//        this.level = level;
         this.description = description;
         this.type = type;
         this.url = url;
         this.image = img_url;
+    }
+    public String getMyClass(){
+         return this.getClass().getName().replaceAll(".*\\.","");
     }
 //    public Node(Long id, String name, String level, String description, String type, String img_url) {
 //        this.id = id;

@@ -19,13 +19,6 @@ public class NodeServiceTest {
 
     @Autowired
     NodeService nodeService;
-
-    @Test
-    public void findOne(){
-        Node result = nodeService.findByName("相关标准");
-        System.out.println(result.getName());
-    }
-
     @Test
     public void findLike(){
         Collection<Node> nodes = nodeService.findNodesByNameLike("字母形");
@@ -50,6 +43,13 @@ public class NodeServiceTest {
         Long b = a.longValue();
         System.out.println(a.longValue());
         System.out.println(nodeService.selectgraphById(b));
+    }
+
+    @Test
+    public void graphTest(){
+        Integer a = 2266;
+        Long b = a.longValue();
+        System.out.println(nodeService.graph(b));
     }
 
 }
